@@ -43,6 +43,6 @@ server:
 
 okta:
   oauth2:
-    issuer: https://dev-70ucdi5kvhnfbo72.us.auth0.com
+    issuer: https://dev-70ucdi5kvhnfbo72.us.auth0.com/
     client-id: RnQcjR24qb9ZiYhKnDV5eIUBGZJbwswB
     client-secret: BtroCnzHedxZBDYZYOUzj07iLXENi1zH-lh3tAaZ13c8RaK3n8cQfnnxsWt1vOCO
