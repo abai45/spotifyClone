@@ -1,0 +1,48 @@
+logging:
+  level:
+    ROOT: info
+    org.hibernate.SQL: DEBUG
+    fr.alikhandroz.spotifyclone: DEBUG
+
+spring:
+  application:
+    name: alikhandroz
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bitlab
+    username: postgres
+    password: 1234
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: deferred
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: bitlab_spoty
+  liquibase:
+    contexts: dev
+    change-log: classpath:db/changelog/master.xml
+    default-schema: bitlab_spoty
+    enabled: true
+  #    drop-first: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+server:
+  port: 8080
+
+okta:
+  oauth2:
+    issuer: https://dev-70ucdi5kvhnfbo72.us.auth0.com
+    client-id: RnQcjR24qb9ZiYhKnDV5eIUBGZJbwswB
+    client-secret: BtroCnzHedxZBDYZYOUzj07iLXENi1zH-lh3tAaZ13c8RaK3n8cQfnnxsWt1vOCO
